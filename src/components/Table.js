@@ -6,7 +6,8 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Grid from "@material-ui/core/Grid";
-import Papa from "papaparse";
+import * as d3 from "d3";
+import data from "./red_flag_schedule.csv";
 
 const useStyles = makeStyles({
   table: {
@@ -18,18 +19,7 @@ export default function DenseTable() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    async function getData() {
-      const response = await fetch("/data/red_flag_schedule.csv");
-      console.log(response)
-      const reader = response.body.getReader();
-      const result = await reader.read();
-      const decoder = new TextDecoder("utf-8");
-      const csv = decoder.decode(result.value);
-      const results = Papa.parse(csv, { header: true });
-      setRows(results.data);
-      console.log(results.data);
-    }
-    getData();
+    d3.csv(data).then((res) => setRows(res));
   }, []);
 
   const classes = useStyles();
