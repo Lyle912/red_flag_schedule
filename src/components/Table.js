@@ -20,6 +20,7 @@ export default function DenseTable() {
   useEffect(() => {
     async function getData() {
       const response = await fetch("/data/red_flag_schedule.csv");
+      console.log(response)
       const reader = response.body.getReader();
       const result = await reader.read();
       const decoder = new TextDecoder("utf-8");
