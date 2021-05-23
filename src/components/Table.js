@@ -14,8 +14,10 @@ const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
-  body: {
-    color: "red",
+  cell: {
+    color: "white",
+    border: "2px solid black",
+    textAlign: "center",
   },
 });
 
@@ -69,10 +71,20 @@ const attendeeConvert = (row) => {
   return attendeeArray.map((attendee) => converter[attendee]).join(", ");
 };
 
+function zoomOutMobile() {
+  var viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.content = "initial-scale=0.1";
+    viewport.content = "width=650";
+  }
+}
+
 export default function DenseTable() {
   const [rows, setRows] = useState([]);
+  const classes = useStyles();
 
   useEffect(() => {
+    zoomOutMobile();
     const titles = myCSV.slice(0, myCSV.indexOf("\n")).split(",");
     const csvRows = myCSV.slice(myCSV.indexOf("\n") + 1).split("\n");
     setRows(
@@ -84,10 +96,7 @@ export default function DenseTable() {
         );
       })
     );
-    console.log(rows);
   }, []);
-
-  const classes = useStyles();
 
   const getRowStyle = (row) => {
     let backColor = row["Plan/Exec"] === "P" ? "#1922E1" : "#bd0f0f";
@@ -112,17 +121,13 @@ export default function DenseTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow style={getRowStyle(row)}>
-              <TableCell style={{ color: "white", border: "2px solid black" }}>
+              <TableCell className={classes.cell}>
                 <div>{`${row.Start}-`}</div>
                 <div>{row.End}</div>
               </TableCell>
-              <TableCell style={{ color: "white", border: "2px solid black" }}>
-                {row.Event}
-              </TableCell>
-              <TableCell style={{ color: "white", border: "2px solid black" }}>
-                {row.Location}
-              </TableCell>
-              <TableCell style={{ color: "white", border: "2px solid black" }}>
+              <TableCell className={classes.cell}>{row.Event}</TableCell>
+              <TableCell className={classes.cell}>{row.Location}</TableCell>
+              <TableCell className={classes.cell}>
                 {attendeeConvert(row.Attendees)}
               </TableCell>
             </TableRow>
