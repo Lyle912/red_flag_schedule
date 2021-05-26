@@ -1,11 +1,11 @@
 import React from "react";
 import "../App.css";
-import Table from "./Table";
+import Schedule from "./Schedule";
 
 function App() {
   return (
     <div className="App">
-      <Table />
+      <Schedule />
     </div>
   );
 }
