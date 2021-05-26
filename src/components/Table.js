@@ -115,6 +115,7 @@ export default function DenseTable({ filter }) {
         .some((r) => filter.roles.includes(r))
     );
 
+    
   return (
     <Grid item xs={12}>
       <Table className={classes.table} size="small" aria-label="a dense table">
