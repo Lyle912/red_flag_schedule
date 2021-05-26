@@ -19,6 +19,9 @@ const useStyles = makeStyles({
     border: "2px solid black",
     textAlign: "center",
   },
+  headerCell:{
+    textAlign: "center",
+  }
 });
 
 const myCSV =
@@ -113,16 +116,16 @@ export default function DenseTable({ filter }) {
         .split(", ")
         .some((r) => filter.roles.includes(r))
     );
-    
+
   return (
     <Grid item xs={12}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
-          <TableRow>
-            <TableCell>Time</TableCell>
-            <TableCell>Event</TableCell>
-            <TableCell>Location</TableCell>
-            <TableCell>Atendees</TableCell>
+          <TableRow >
+            <TableCell className={classes.headerCell}>Time</TableCell>
+            <TableCell className={classes.headerCell}>Event</TableCell>
+            <TableCell className={classes.headerCell}>Location</TableCell>
+            <TableCell className={classes.headerCell}>Atendees</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
