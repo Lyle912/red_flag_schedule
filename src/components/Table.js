@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 });
 
 const myCSV =
-  "Start,End,Event,Location,Attendees,Vul,Plan/Exec\n0500,0530,Next Day DIM (Pre-Frag),MPC 1,1-2-3-4-5-6-7,AM,P\n0600,0630,Next Day MAM (Frag),MPC 1,1-2-3-4-5-6,AM,P\n0600,0700,LFE Mass Brief,MBR,8-9-4-7-6-10-11,AM,E\n0615,0715,LFE OPFOR Brief,CCR,11,AM,E\n0630,0700,LFE CAS VUL Brief (2202),CPT Front,12,AM,E\n0630,0700,LFE CAS VUL Brief (2205),CPT Back,13,AM,E\n0700,1330,SOF Shift Show,PAEI Tower,0,AM,P\n0730,0830,Next Day CAS Vul Coord (2202),CPT FRONT,14-15-16-17-18,AM,P\n0730,0830,Next Day CAS Vul Coord (2205),CPT BACK,14-15-16-17-18,AM,P\n0800,0800,Next Day ATO Change 1 Push,N/A,4,AM,P\n0800,0845,MXG Standup,T-Dome,19,AM,P\n0800,0830,Next Day JECG Coord,CCR,20-10-21-22-23-24-25-3,AM,P\n0830,0900,Next Day Post-LFE Coord,MPC 2,26-6-23,AM,P\n0830,0900,LFE FAA Recovery Discussion,CTS RM-172,27-28-29-30,AM,E\n0900,0930,DF/CC Standup,CCR,9-31-19-32,AM,P\n0900,0940,Intel Coord Meeting,MBR,4-33,AM,P\n1000,1100,LFE Vul on Display,MBR,0,AM,E\n1000,1000,Next Day ATO Change 2 Push,N/A,4,AM,P\n1030,1045,Next Day Initial Product Review,MPC 1,1-2-4-5-6,AM,P\n1130,1200,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM,P\n1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E\n1300,1400,Next Day GCAM (Final Product Review),MPC 1,9-1-2-4-5-6-10-4,AM,P\n1300,1300,2 Day Out Intel Product Drop,N/A,4,AM,P\n1315,1400,LFE Blue Shot Pre-Pair,MBR,34-35-36,AM,E\n1315,1345,FAA Conference Call,CTS RM-172,6-10-29-30,AM,P\n1330,1330,SOF Change-Over,PAEI Tower,0,AM,P\n1345,1400,Army Range Control Conf Call,CTS RM-172,39-37-38,AM,P\n1400,1430,LFE Blue Pre-Mass,MBR,6-8,AM,E\n1415,1445,Next Day CAS Plan Brief,CPT Back,14-40-6-10,AM,P\n1430,1600,LFE Mass Debrief,MBR,8-9-4-6-10-11,AM,E\n1445,1600,LFE CAS Vul Debrief (2202),CPT Front,12,AM,E\n1445,1600,LFE CAS Vul Debrief (2205),CPT Back,13,AM,E\n1620,1630,LFE MiG-1/SAM-1 Data Presentation,MBR,8-9-4-6-10-11,AM,E\n1630,1730,LFE DFP Development,MBR,8-9,AM,E\n1630,1700,LFE JECG Debrief,OPS,11-23-6-10,AM,E\n1630,1700,LFE OPFOR Debrief,MPC 1,11,AM,E\n1730,1750,LFE DFP Presentation,MBR,8-9-4-6-10,AM,E";
+  "Start,End,Event,Location,Attendees,Vul,Plan/Exec\n0500,0530,Next Day DIM (Pre-Frag),MPC 1,1-2-3-4-5-6-7,AM,P\n0600,0630,Next Day MAM (Frag),MPC 1,1-2-3-4-5-6,AM,P\n0600,0700,LFE Mass Brief,MBR,8-9-4-7-6-10-11,AM,E\n0615,0715,LFE OPFOR Brief,CCR,11,AM,E\n0630,0700,LFE CAS VUL Brief (2202),CPT Front,12,AM,E\n0630,0700,LFE CAS VUL Brief (2205),CPT Back,13,AM,E\n0700,1330,SOF Shift Show,PAEI Tower,0,AM,P\n0730,0830,Next Day CAS Vul Coord (2202),CPT FRONT,14-15-16-17-18,AM,P\n0730,0830,Next Day CAS Vul Coord (2205),CPT BACK,14-15-16-17-18,AM,P\n0800,0800,Next Day ATO Change 1 Push,N/A,4,AM,P\n0800,0845,MXG Standup,T-Dome,19,AM,P\n0800,0830,Next Day JECG Coord,CCR,20-10-21-22-23-24-25-3,AM,P\n0830,0900,Next Day Post-LFE Coord,MPC 2,26-6-23,AM,P\n0830,0900,LFE FAA Recovery Discussion,CTS RM-172,27-28-29-30,AM,E\n0900,0930,DF/CC Standup,CCR,9-31-19-32,AM,P\n0900,0940,Intel Coord Meeting,MBR,4-33,AM,P\n1000,1100,LFE Vul on Display,MBR,0,AM,E\n1000,1000,Next Day ATO Change 2 Push,N/A,4,AM,P\n1030,1045,Next Day Initial Product Review,MPC 1,1-2-4-5-6,AM,P\n1130,1200,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM,P\n1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E\n1300,1400,Next Day GCAM (Final Product Review),MPC 1,9-1-2-4-5-6-10,AM,P\n1300,1300,2 Day Out Intel Product Drop,N/A,4,AM,P\n1315,1400,LFE Blue Shot Pre-Pair,MBR,34-35-36,AM,E\n1315,1345,FAA Conference Call,CTS RM-172,6-10-29-30,AM,P\n1330,1330,SOF Change-Over,PAEI Tower,0,AM,P\n1345,1400,Army Range Control Conf Call,CTS RM-172,39-37-38,AM,P\n1400,1430,LFE Blue Pre-Mass,MBR,6-8,AM,E\n1415,1445,Next Day CAS Plan Brief,CPT Back,14-40-6-10,AM,P\n1430,1600,LFE Mass Debrief,MBR,8-9-4-6-10-11,AM,E\n1445,1600,LFE CAS Vul Debrief (2202),CPT Front,12,AM,E\n1445,1600,LFE CAS Vul Debrief (2205),CPT Back,13,AM,E\n1620,1630,LFE MiG-1/SAM-1 Data Presentation,MBR,8-9-4-6-10-11,AM,E\n1630,1730,LFE DFP Development,MBR,8-9,AM,E\n1630,1700,LFE JECG Debrief,OPS,11-23-6-10,AM,E\n1630,1700,LFE OPFOR Debrief,MPC 1,11,AM,E\n1730,1750,LFE DFP Presentation,MBR,8-9-4-6-10,AM,E";
 
 const attendeeConvert = (row) => {
   const converter = {
@@ -105,8 +105,6 @@ export default function DenseTable({ filter }) {
     let backColor = row["Plan/Exec"] === "P" ? "#1922E1" : "#bd0f0f";
     return {
       backgroundColor: backColor,
-      color: "white",
-      border: "2px solid black",
     };
   };
 
@@ -125,7 +123,7 @@ export default function DenseTable({ filter }) {
             <TableCell className={classes.headerCell}>Time</TableCell>
             <TableCell className={classes.headerCell}>Event</TableCell>
             <TableCell className={classes.headerCell}>Location</TableCell>
-            <TableCell className={classes.headerCell}>Atendees</TableCell>
+            <TableCell className={classes.headerCell}>Attendees</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
