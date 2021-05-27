@@ -19,9 +19,9 @@ const useStyles = makeStyles({
     border: "2px solid black",
     textAlign: "center",
   },
-  headerCell:{
+  headerCell: {
     textAlign: "center",
-  }
+  },
 });
 
 const myCSV =
@@ -108,19 +108,26 @@ export default function DenseTable({ filter }) {
     };
   };
 
-  const filterRows = (rows) =>
-    rows.filter((row) =>
+  const filterRows = (rows) => {
+    console.log(filter)
+    let filteredRows = rows.filter((row) =>
       attendeeConvert(row.Attendees)
         .split(", ")
         .some((r) => filter.roles.includes(r))
     );
 
-    
+    if (!filter.plan)
+      filteredRows = filteredRows.filter((row) => row["Plan/Exec"] !== "P");
+    if (!filter.exec)
+      filteredRows = filteredRows.filter((row) => row["Plan/Exec"] !== "E");
+    return filteredRows;
+  };
+
   return (
     <Grid item xs={12}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
-          <TableRow >
+          <TableRow>
             <TableCell className={classes.headerCell}>Time</TableCell>
             <TableCell className={classes.headerCell}>Event</TableCell>
             <TableCell className={classes.headerCell}>Location</TableCell>
