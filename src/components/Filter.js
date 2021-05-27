@@ -108,14 +108,14 @@ export default function Filter() {
         <Autocomplete
           multiple
           id="roles-checkboxes"
-          options={filterState.roles}
+          options={roleOptions}
           disableCloseOnSelect
           getOptionLabel={(option) => option}
           onChange={(event, value) => {
             setFilter({ ...filterState, roles: value });
             setfilterState({ ...filterState, roles: value });
           }}
-          defaultValue={filterState.roles.map((role) => role)}
+          defaultValue={roleOptions.map((role) => role)}
           renderOption={(option, { selected }) => (
             <React.Fragment>
               <Checkbox style={{ marginRight: 8 }} checked={selected} />
