@@ -51,9 +51,9 @@ export default function Schedule() {
       "RDO",
       "Trigger",
       "JD",
-    ]
+    ],
   });
-  
+
   return (
     <Grid>
       <article style={showFilter ? {} : { display: "none" }}>

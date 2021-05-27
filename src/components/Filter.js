@@ -63,6 +63,7 @@ export default function Filter() {
     marginBottom: "5px",
     marginLeft: "5px",
     backgroundColor: filterState[category] ? "#089404" : "#bd0f0f",
+    textDecoration: filterState[category] ? "none" : "line-through"
   });
 
   const handleClick = (category) => {
