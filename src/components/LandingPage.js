@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Grid, Button } from "@material-ui/core";
 import RedFlag from "../images/RedFlag.png";
 import { Link } from "react-router-dom";
@@ -10,6 +10,14 @@ export default function LandingPage() {
     marginTop: "5px",
     marginBottom: "5px",
   });
+
+  useEffect(() => {
+    var viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      viewport.content = "initial-scale=0.1";
+      viewport.content = "width=device-width";
+    }
+  }, []);
 
   return (
     <Grid>
