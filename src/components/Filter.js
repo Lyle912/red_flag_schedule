@@ -46,15 +46,9 @@ const roleOptions = [
   "JD",
 ];
 
-export default function Filter() {
+export default function Filter({ currentFilter }) {
   const setFilter = useContext(FilterContext);
-  const [filterState, setfilterState] = useState({
-    AM: true,
-    PM: true,
-    plan: true,
-    exec: true,
-    roles: roleOptions,
-  });
+  const [filterState, setfilterState] = useState(currentFilter);
 
   const getStyle = (category) => ({
     minWidth: "100px",
@@ -63,7 +57,7 @@ export default function Filter() {
     marginBottom: "5px",
     marginLeft: "5px",
     backgroundColor: filterState[category] ? "#089404" : "#bd0f0f",
-    textDecoration: filterState[category] ? "none" : "line-through"
+    textDecoration: filterState[category] ? "none" : "line-through",
   });
 
   const handleClick = (category) => {
@@ -72,7 +66,7 @@ export default function Filter() {
   };
 
   return (
-    <Grid container>
+    <Grid container style={{backgroundColor:"white", paddingBottom:"10px"}}>
       <Grid item xs={12}>
         <Button
           variant="contained"

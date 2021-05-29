@@ -8,11 +8,16 @@ import {
   TableHead,
   TableRow,
   Grid,
+  Button,
 } from "@material-ui/core";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
+    border: "1px solid black",
+    marginTop: "1px",
   },
   cell: {
     color: "white",
@@ -21,6 +26,10 @@ const useStyles = makeStyles({
   },
   headerCell: {
     textAlign: "center",
+    color: "black",
+    fontWeight: "bold",
+    border: "2px solid black",
+    backgroundColor: "#DDDDDD",
   },
 });
 
@@ -125,44 +134,93 @@ export default function DenseTable({ filter }) {
       filteredRows = filteredRows.filter((row) => !row["Vul"].includes("PM"));
     return filteredRows;
   };
+  console.log(rows);
+
+  const exportPDF = (rows) => {
+    const unit = "pt";
+    const size = "A4"; // Use A1, A2, A3 or A4
+    const orientation = "portrait"; // portrait or landscape
+
+    const marginLeft = 40;
+    const doc = new jsPDF(orientation, unit, size);
+
+    doc.setFontSize(15);
+
+    const title = "RF-A 21-2 Schedule";
+    const headers = [
+      ["Time", "Event", "Vul", "Shift", "Location", "Attendees"],
+    ];
+
+    const data = filterRows(rows).map((row) => [
+      `${row.Start}-${row.End}`,
+      row.Event,
+      row["Plan/Exec"] === "P" ? "Plan " : "Execution",
+      row.Vul,
+      row.Location,
+      attendeeConvert(row.Attendees),
+    ]);
+
+    let content = {
+      startY: 50,
+      head: headers,
+      body: data,
+    };
+
+    doc.text(title, marginLeft, 40);
+    doc.autoTable(content);
+    doc.save("schedule.pdf");
+  };
 
   return (
-    <Grid item xs={12}>
-      <Table className={classes.table} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell className={classes.headerCell}>Time</TableCell>
-            <TableCell className={classes.headerCell}>Event</TableCell>
-            {filter.AM && filter.PM ? (
-              <TableCell className={classes.headerCell}>Shift</TableCell>
-            ) : (
-              <></>
-            )}
-            <TableCell className={classes.headerCell}>Location</TableCell>
-            <TableCell className={classes.headerCell}>Attendees</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {filterRows(rows).map((row) => (
-            <TableRow style={getRowStyle(row)}>
-              <TableCell className={classes.cell}>
-                <div>{`${row.Start}-`}</div>
-                <div>{row.End}</div>
-              </TableCell>
-              <TableCell className={classes.cell}>{row.Event}</TableCell>
+    <Grid container>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => exportPDF(rows)}
+      >
+        Download Schedule
+      </Button>
+      <Grid item xs={12}>
+        <Table
+          className={classes.table}
+          size="small"
+          aria-label="a dense table"
+        >
+          <TableHead>
+            <TableRow>
+              <TableCell className={classes.headerCell}>Time</TableCell>
+              <TableCell className={classes.headerCell}>Event</TableCell>
               {filter.AM && filter.PM ? (
-                <TableCell className={classes.cell}>{row.Vul}</TableCell>
+                <TableCell className={classes.headerCell}>Shift</TableCell>
               ) : (
                 <></>
               )}
-              <TableCell className={classes.cell}>{row.Location}</TableCell>
-              <TableCell className={classes.cell}>
-                {attendeeConvert(row.Attendees)}
-              </TableCell>
+              <TableCell className={classes.headerCell}>Location</TableCell>
+              <TableCell className={classes.headerCell}>Attendees</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {filterRows(rows).map((row) => (
+              <TableRow style={getRowStyle(row)}>
+                <TableCell className={classes.cell}>
+                  <div>{`${row.Start}-`}</div>
+                  <div>{row.End}</div>
+                </TableCell>
+                <TableCell className={classes.cell}>{row.Event}</TableCell>
+                {filter.AM && filter.PM ? (
+                  <TableCell className={classes.cell}>{row.Vul}</TableCell>
+                ) : (
+                  <></>
+                )}
+                <TableCell className={classes.cell}>{row.Location}</TableCell>
+                <TableCell className={classes.cell}>
+                  {attendeeConvert(row.Attendees)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Grid>
     </Grid>
   );
 }

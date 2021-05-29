@@ -3,11 +3,11 @@ import Table from "./Table";
 import Filter from "./Filter";
 import { Button, Grid } from "@material-ui/core";
 
-export default function Schedule() {
+export default function Schedule({ match }) {
   const [showFilter, toggleFilter] = useState(false);
   const [filterSelection, setFilterSelection] = useState({
-    AM: true,
-    PM: true,
+    AM: match.params.shift.includes("am") ? true : false,
+    PM: match.params.shift.includes("pm") ? true : false,
     plan: true,
     exec: true,
     roles: [
@@ -58,39 +58,23 @@ export default function Schedule() {
     <Grid>
       <article style={showFilter ? {} : { display: "none" }}>
         <FilterContext.Provider value={setFilterSelection}>
-          <Filter />
+          <Filter currentFilter={filterSelection} />
         </FilterContext.Provider>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => toggleFilter(!showFilter)}
-          style={{
-            maxWidth: "200px",
-            maxHeight: "30px",
-            minWidth: "200px",
-            minHeight: "30px",
-            marginTop: "10px",
-          }}
-        >
-          Hide Filter
-        </Button>
       </article>
-      <article style={showFilter ? { display: "none" } : {}}>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => toggleFilter(!showFilter)}
-          style={{
-            maxWidth: "200px",
-            maxHeight: "30px",
-            minWidth: "200px",
-            minHeight: "30px",
-            marginTop: "10px",
-          }}
-        >
-          Filter Schedule
-        </Button>
-      </article>
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => toggleFilter(!showFilter)}
+        style={{
+          maxWidth: "200px",
+          maxHeight: "30px",
+          minWidth: "200px",
+          minHeight: "30px",
+          marginTop: "10px",
+        }}
+      >
+        {showFilter ? "Hide Filter" : "Filter Schedule"}
+      </Button>
       <Table filter={filterSelection} />
     </Grid>
   );
