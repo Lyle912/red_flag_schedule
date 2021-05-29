@@ -134,7 +134,6 @@ export default function DenseTable({ filter }) {
       filteredRows = filteredRows.filter((row) => !row["Vul"].includes("PM"));
     return filteredRows;
   };
-  console.log(rows);
 
   const exportPDF = (rows) => {
     const unit = "pt";
