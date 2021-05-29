@@ -5,6 +5,14 @@
 body {
   background-image: url("./images/blackBackground.jpg");
   background-position: center;
-  width: 100vw;
-  height: 100vh;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: #1922e1;
+  color: white;
 }
