@@ -42,8 +42,6 @@ const roleOptions = [
   "ATC",
   "CTS ADO",
   "RDO",
-  "Trigger",
-  "JD",
 ];
 
 export default function Filter({ currentFilter }) {

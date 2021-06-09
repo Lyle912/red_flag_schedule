@@ -31,7 +31,7 @@ export default function LandingPage() {
         style={{ height: "200px", margin: "20px" }}
       />
       <Typography variant="h5" style={{ color: "white" }}>
-        Select your desired schedule
+        Select your desired schedule (MSOEv3)
       </Typography>
       <Grid container>
         <Grid item xs={6}>
