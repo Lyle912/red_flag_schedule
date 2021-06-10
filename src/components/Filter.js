@@ -20,7 +20,7 @@ const roleOptions = [
   "JECG Intel",
   "Intel",
   "LFE Participant",
-  "MPC-Rep",
+  "MPC Rep",
   "CAS Msn/CC",
   "CAS Participant",
   "2202 CAS Vul Participant",
@@ -42,6 +42,8 @@ const roleOptions = [
   "ATC",
   "CTS ADO",
   "RDO",
+  "SOF SME",
+  "JFIRES SME"
 ];
 
 export default function Filter({ currentFilter }) {
