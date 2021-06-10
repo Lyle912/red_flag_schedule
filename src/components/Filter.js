@@ -47,6 +47,7 @@ const roleOptions = [
 export default function Filter({ currentFilter }) {
   const setFilter = useContext(FilterContext);
   const [filterState, setfilterState] = useState(currentFilter);
+  const [values, setValues] = useState(roleOptions);
 
   const getStyle = (category) => ({
     minWidth: "100px",
@@ -63,8 +64,21 @@ export default function Filter({ currentFilter }) {
     setfilterState({ ...filterState, [category]: !filterState[category] });
   };
 
+  const handleChange = (e, v) => {
+    setValues(v);
+    setFilter({ ...filterState, roles: v });
+    setfilterState({ ...filterState, roles: v });
+  };
+
+  const updateValues = (method) => {
+    let updatedRoles = method === "select" ? roleOptions : [];
+    setValues(updatedRoles);
+    setFilter({ ...filterState, roles: updatedRoles });
+    setfilterState({ ...filterState, roles: updatedRoles });
+  };
+
   return (
-    <Grid container style={{backgroundColor:"white", paddingBottom:"10px"}}>
+    <Grid container style={{ backgroundColor: "white", paddingBottom: "10px" }}>
       <Grid item xs={12}>
         <Button
           variant="contained"
@@ -104,11 +118,9 @@ export default function Filter({ currentFilter }) {
           options={roleOptions}
           disableCloseOnSelect
           getOptionLabel={(option) => option}
-          onChange={(event, value) => {
-            setFilter({ ...filterState, roles: value });
-            setfilterState({ ...filterState, roles: value });
-          }}
+          onChange={handleChange}
           defaultValue={roleOptions.map((role) => role)}
+          value={values}
           renderOption={(option, { selected }) => (
             <React.Fragment>
               <Checkbox style={{ marginRight: 8 }} checked={selected} />
@@ -124,6 +136,24 @@ export default function Filter({ currentFilter }) {
             />
           )}
         />
+        <Button
+          variant="contained"
+          onClick={() => updateValues("select")}
+          style={{ backgroundColor: "#089404", marginTop: "2px" }}
+        >
+          Select All Roles
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => updateValues("clear")}
+          style={{
+            backgroundColor: "#bd0f0f",
+            marginLeft: "5px",
+            marginTop: "2px",
+          }}
+        >
+          Clear All Roles
+        </Button>
       </Grid>
     </Grid>
   );
