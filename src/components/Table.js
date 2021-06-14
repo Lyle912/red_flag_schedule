@@ -135,6 +135,8 @@ export default function DenseTable({ filter }) {
       filteredRows = filteredRows.filter((row) => !row["Vul"].includes("AM") || row["Vul"].includes("PM"));  
     if (!filter.PM)
       filteredRows = filteredRows.filter((row) => !row["Vul"].includes("PM") || row["Vul"].includes("AM"));
+    if (!filter.PM && !filter.AM)
+      filteredRows = filteredRows.filter((row) => false);
     return filteredRows;
     
   };
