@@ -4,6 +4,7 @@ import { FilterContext } from "./Schedule";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 
 const roleOptions = [
+  "LFE Participant",
   "DF/CC",
   "Msn/CC",
   "Team Lead",
@@ -19,12 +20,11 @@ const roleOptions = [
   "TTF",
   "JECG Intel",
   "Intel",
-  "LFE Participant",
   "MPC Rep",
   "CAS Msn/CC",
   "CAS Participant",
-  "2202 CAS Vul Participant",
-  "2205 CAS Vul Participant",
+  "2202 Post-LFE Participant",
+  "2205 Post-LFE Participant",
   "JTAC",
   "SOLE",
   "ASOC",
@@ -34,6 +34,7 @@ const roleOptions = [
   "GLO",
   "Mx Rep",
   "Wx",
+  "Post-LFE Team Lead",
   "Post LFE Vul Rep",
   "Blue w/ Shots to Pair",
   "RTO",
@@ -43,7 +44,8 @@ const roleOptions = [
   "CTS ADO",
   "RDO",
   "SOF SME",
-  "JFIRES SME"
+  "JFIRES SME",
+  "Supervisor of Flying"
 ];
 
 export default function Filter({ currentFilter }) {

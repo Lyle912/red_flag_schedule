@@ -30,8 +30,8 @@ export default function Schedule({ match }) {
       "MPC-Rep",
       "CAS Msn/CC",
       "CAS Participant",
-      "2202 CAS Vul Participant",
-      "2205 CAS Vul Participant",
+      "2202 Post-LFE Participant",
+      "2205 Post-LFE Participant",
       "JTAC",
       "SOLE",
       "ASOC",
@@ -41,6 +41,7 @@ export default function Schedule({ match }) {
       "GLO",
       "Mx Rep",
       "Wx",
+      "Post-LFE Team Lead",
       "Post LFE Vul Rep",
       "Blue w/ Shots to Pair",
       "RTO",
@@ -49,8 +50,9 @@ export default function Schedule({ match }) {
       "ATC",
       "CTS ADO",
       "RDO",
-      "Trigger",
-      "JD",
+      "SOF SME",
+      "JFIRES SME",
+      "Supervisor of Flying"
     ],
   });
 
