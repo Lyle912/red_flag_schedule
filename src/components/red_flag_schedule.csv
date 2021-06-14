@@ -26,7 +26,7 @@
 1300,1330,LFE Post-LFE Brief (2202),CPT 2 Left,12,PM,E
 1300,1330,LFE Post-LFE Brief (2202),CPT 2 Right,13,PM,E
 1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E
-1300,1400,Next Day GCAM (Final Product Review),MPC 1,9-1-2-4-5-6-10,3,AM,P
+1300,1400,Next Day GCAM (Final Product Review),MPC 1,9-1-2-4-5-6-10-3,AM,P
 1300,1300,2 Day Out Intel Product Drop,N/A,4-23,AM,P
 1315,1400,LFE Blue Shot Pre-Pair,MBR,34-35-36,AM,E
 1315,1345,FAA Conference Call,CTS RM-172,28-10-29-30,AM-PM,P
@@ -53,7 +53,7 @@
 1700,1700,2 Day Out Intel Product Drop,N/A,4-23,PM,P
 1730,1750,LFE DFP Presentation,MBR,8-9-4-6-10,AM,E
 1845,2000,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,PM,E
-1900,2000,Next Day GCAM (Final Product Review),MPC 2,9-1-2-4-5-6-10,3,PM,P
+1900,2000,Next Day GCAM (Final Product Review),MPC 2,9-1-2-4-5-6-10-3,PM,P
 1900,1945,LFE Blue Shot Pre-Pair,MBR,34-35-36,PM,E
 1945,2015,LFE Blue Pre-Mass,MBR,6-8,PM,E
 2015,2145,LFE Mass Debrief,MBR,8-9-4-6-10-11,PM,E
