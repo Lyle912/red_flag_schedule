@@ -22,7 +22,7 @@ export default function LandingPage() {
   return (
     <Grid>
       <Typography variant="h2" style={{ color: "white" }}>
-        Welcome to Red Flag Alaska 21-2
+        Welcome to Red Flag Alaska 21-3
       </Typography>
       <img
         className="red-flag-logo"
@@ -31,7 +31,7 @@ export default function LandingPage() {
         style={{ height: "200px", margin: "20px" }}
       />
       <Typography variant="h5" style={{ color: "white" }}>
-        Select your desired schedule (MSOEv6)
+        Select your desired schedule (MSOEv3)
       </Typography>
       <Grid container>
         <Grid item xs={6}>

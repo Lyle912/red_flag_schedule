@@ -9,7 +9,7 @@ export default function Footer() {
       align="center"
       gutterBottom
     >
-      Schedule App Created by SSgt Lyle Rubin, 353 CTS
+      Digital MSOE Created by SSgt Lyle Rubin, 353 CTS
     </Typography>
   );
 }
