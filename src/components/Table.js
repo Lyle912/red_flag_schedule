@@ -35,7 +35,7 @@ const useStyles = makeStyles({
 });
 
 const myCSV =
-"Start,End,Event,Location,Attendees,Vul,Plan/Exec\n0500,0530,Next Day DIM (Pre-Frag),AMPC,1-2-3-4-5-6-7,AM,P\n0600,0630,Next Day MAM (Frag),AMPC,1-2-3-4-5-6,AM,P\n0600,0700,LFE Mass Brief,LT,8-9-4-7-6-10-11,AM,E\n0600,1400,Next Day Non-STO Vul Coord,MPC 1,13,AM,P\n0615,0715,LFE OPFOR Brief,CCR,11,AM,E\n0700,1500,SOF Shift Show,PAEI Tower,40,AM,P\n0800,0800,Next Day ATO Change 1 Push,N/A,4,AM,P\n0800,0830,Next Day OPFOR Coord,CCR,20-10-21-22-23-24-12-3,AM,P\n0800,0845,MXG Standup,T-Dome,19,AM-PM,P\n0830,0845,LFE FAA Recovery Discussion,CTS RM-191,27-28-29-30,AM,E\n0830,0900,Next Day Post-LFE JECG Coord,CCR,6-23-26,AM,P\n0900,0930,DF/CC Standup,CCR,9-31-19-32,AM-PM,P\n0900,0945,Intel Coord Meeting,MPC 2,4-23-33,AM,P\n1000,1000,Next Day ATO Change 2 Push,N/A,4,AM,P\n1030,1045,Next Day Initial Product Review,AMPC,1-2-4-5-6,AM,P\n1100,1130,Next Day DIM (Pre-Frag),ST,1-2-3-4-5-6-7,PM,P\n1130,1200,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM-PM,P\n1200,1230,Next Day MAM (Frag),ST,1-2-3-4-5-6,PM,P\n1200,1300,LFE Mass Brief,LT,8-9-4-7-6-10-11,PM,E\n1200,2000,Next Day Non-STO Vul Coord,MPC 2,13,PM,P\n1215,1315,LFE OPFOR Brief,CCR,11,PM,E\n1300,1300,2 Day Out Intel Product Drop,N/A,4-23,AM,P\n1300,1345,LFE Blue Shot Pre-Pair,LT,34-35-36,AM,E\n1300,1400,Next Day GCAM (Final Product Review),AMPC,9-1-2-3-4-5-6-10,AM,P\n1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E\n1315,1345,FAA Conference Call,CTS RM-191,28-10-29-30,AM-PM,E\n1345,1400,Army Range Control Conf Call,CTS RM-191,39-37-38,AM-PM,P\n1345,1415,LFE Blue Pre-Mass,LT,8-6,AM,E\n1400,1400,Next Day ATO Change 1 Push,N/A,4,PM,P\n1400,1430,Next Day OPFOR Coord,CCR,20-10-21-22-23-24-12-3,PM,P\n1415,1545,LFE Mass Debrief,LT,8-9-4-6-10-11,AM,E\n1430,1500,Next Day Post-LFE JECG Coord,CCR,6-23-26,PM,P\n1500,1500,SOF Change-Over,PAEI Tower,40,AM-PM,P\n1600,1645,Intel Coord Meeting,MPC 1,4-23-33,PM,P\n1600,1600,Next Day ATO Change 2 Push,N/A,4,PM,P\n1605,1615,LFE MiG-1/SAM-1 Data Presentation,LT,8-9-4-6-10-11,AM,E\n1615,1645,LFE DFP Development,LT,9-8,AM,E\n1615,1645,LFE JECG Debrief,AMPC,11-23-6-10,AM,E\n1615,1645,LFE OPFOR Debrief,AMPC,11,AM,E\n1630,1645,Next Day Initial Product Review,ST,1-2-4-5-6,PM,P\n1645,1700,LFE DFP Presentation,LT,8-9-4-6-10,AM,E\n1700,1700,2 Day Out Intel Product Drop,N/A,4-23,PM,P\n1845,2000,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,PM,E\n1900,1945,LFE Blue Shot Pre-Pair,LT,34-35-36,PM,E\n1900,2000,Next Day GCAM (Final Product Review),ST,9-1-2-3-4-5-6-10,PM,P\n1945,2015,LFE Blue Pre-Mass,LT,8-6,PM,E\n2015,2145,LFE Mass Debrief,LT,8-9-4-6-10-11,PM,E\n2205,2215,LFE MiG-1/SAM-1 Data Presentation,LT,8-9-4-6-10-11,PM,E\n2215,2245,LFE DFP Development,LT,9-8,PM,E\n2215,2245,LFE JECG Debrief,ST,11-23-6-10,PM,E\n2215,2245,LFE OPFOR Debrief,ST,11,PM,E\n2245,2300,LFE DFP Presentation,LT,8-9-4-6-10,PM,E"
+  "Start,End,Event,Location,Attendees,Vul,Plan/Exec\n0500,0530,Next Day DIM (Pre-Frag),AMPC,1-2-3-4-5-6-7,AM,P\n0600,0630,Next Day MAM (Frag),AMPC,1-2-3-4-5-6,AM,P\n0600,0700,LFE Mass Brief,LT,8-9-4-7-6-10-11,AM,E\n0600,1400,Next Day Non-STO Vul Coord,MPC 1,13,AM,P\n0615,0715,LFE OPFOR Brief,CCR,11,AM,E\n0700,1500,SOF Shift Show,PAEI Tower,40,AM,P\n0800,0800,Next Day ATO Change 1 Push,N/A,4,AM,P\n0800,0830,Next Day OPFOR Coord,CCR,20-10-21-22-23-24-12-3,AM,P\n0800,0845,MXG Standup,T-Dome,19,AM-PM,P\n0830,0845,LFE FAA Recovery Discussion,CTS RM-191,27-28-29-30,AM,E\n0830,0900,Next Day Post-LFE JECG Coord,CCR,6-23-26,AM,P\n0900,0930,DF/CC Standup,CCR,9-31-19-32,AM-PM,P\n0900,0945,Intel Coord Meeting,MPC 2,4-23-33,AM,P\n1000,1000,Next Day ATO Change 2 Push,N/A,4,AM,P\n1030,1045,Next Day Initial Product Review,AMPC,1-2-4-5-6,AM,P\n1100,1130,Next Day DIM (Pre-Frag),ST,1-2-3-4-5-6-7,PM,P\n1120,1150,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM-PM,P\n1200,1230,Next Day MAM (Frag),ST,1-2-3-4-5-6,PM,P\n1200,1300,LFE Mass Brief,LT,8-9-4-7-6-10-11,PM,E\n1200,2000,Next Day Non-STO Vul Coord,MPC 2,13,PM,P\n1215,1315,LFE OPFOR Brief,CCR,11,PM,E\n1300,1300,2 Day Out Intel Product Drop,N/A,4-23,AM,P\n1300,1345,LFE Blue Shot Pre-Pair,LT,34-35-36,AM,E\n1300,1400,Next Day GCAM (Final Product Review),AMPC,9-1-2-3-4-5-6-10,AM,P\n1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E\n1300,1415,LFE Blue Shot Pre-Pair,MBR,34-35-36,AM,E\n1315,1345,FAA Conference Call,CTS RM-191,28-10-29-30,AM-PM,E\n1345,1400,Army Range Control Conf Call,CTS RM-191,39-37-38,AM-PM,P\n1345,1415,LFE Blue Pre-Mass,LT,8-6,AM,E\n1400,1400,Next Day ATO Change 1 Push,N/A,4,PM,P\n1400,1430,Next Day OPFOR Coord,CCR,20-10-21-22-23-24-12-3,PM,P\n1415,1545,LFE Mass Debrief,LT,8-9-4-6-10-11,AM,E\n1430,1500,Next Day Post-LFE JECG Coord,CCR,6-23-26,PM,P\n1500,1500,SOF Change-Over,PAEI Tower,40,AM-PM,P\n1600,1645,Intel Coord Meeting,MPC 1,4-23-33,PM,P\n1600,1600,Next Day ATO Change 2 Push,N/A,4,PM,P\n1605,1615,LFE MiG-1/SAM-1 Data Presentation,LT,8-9-4-6-10-11,AM,E\n1615,1645,LFE DFP Development,LT,9-8,AM,E\n1615,1645,LFE JECG Debrief,AMPC,11-23-6-10,AM,E\n1615,1645,LFE OPFOR Debrief,AMPC,11,AM,E\n1630,1645,Next Day Initial Product Review,ST,1-2-4-5-6,PM,P\n1645,1700,LFE DFP Presentation,LT,8-9-4-6-10,AM,E\n1700,1700,2 Day Out Intel Product Drop,N/A,4-23,PM,P\n1845,2000,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,PM,E\n1900,1945,LFE Blue Shot Pre-Pair,LT,34-35-36,PM,E\n1900,1945,LFE Blue Shot Pre-Pair,MBR,34-35-36,PM,E\n1900,2000,Next Day GCAM (Final Product Review),ST,9-1-2-3-4-5-6-10,PM,P\n1945,2015,LFE Blue Pre-Mass,LT,8-6,PM,E\n2015,2145,LFE Mass Debrief,LT,8-9-4-6-10-11,PM,E\n2205,2215,LFE MiG-1/SAM-1 Data Presentation,LT,8-9-4-6-10-11,PM,E\n2215,2245,LFE DFP Development,LT,9-8,PM,E\n2215,2245,LFE JECG Debrief,ST,11-23-6-10,PM,E\n2215,2245,LFE OPFOR Debrief,ST,11,PM,E\n2245,2300,LFE DFP Presentation,LT,8-9-4-6-10,PM,E";
 const attendeeConvert = (row) => {
   const converter = {
     1: "Msn/CC",
@@ -121,21 +121,24 @@ export default function DenseTable({ filter }) {
     let filteredRows = rows.filter((row) =>
       attendeeConvert(row.Attendees)
         .split(", ")
-        .some((r) => filter.roles.includes(r) || r ==="")
+        .some((r) => filter.roles.includes(r) || r === "")
     );
-    
+
     if (!filter.plan)
       filteredRows = filteredRows.filter((row) => row["Plan/Exec"] !== "P");
     if (!filter.exec)
       filteredRows = filteredRows.filter((row) => row["Plan/Exec"] !== "E");
     if (!filter.AM)
-      filteredRows = filteredRows.filter((row) => !row["Vul"].includes("AM") || row["Vul"].includes("PM"));  
+      filteredRows = filteredRows.filter(
+        (row) => !row["Vul"].includes("AM") || row["Vul"].includes("PM")
+      );
     if (!filter.PM)
-      filteredRows = filteredRows.filter((row) => !row["Vul"].includes("PM") || row["Vul"].includes("AM"));
+      filteredRows = filteredRows.filter(
+        (row) => !row["Vul"].includes("PM") || row["Vul"].includes("AM")
+      );
     if (!filter.PM && !filter.AM)
       filteredRows = filteredRows.filter((row) => false);
     return filteredRows;
-    
   };
 
   const exportPDF = (rows) => {
@@ -148,7 +151,7 @@ export default function DenseTable({ filter }) {
 
     doc.setFontSize(15);
 
-    const title = "RF-A 21-3 Schedule (MSOEv3)";
+    const title = "RF-A 21-3 Schedule (MSOEv5)";
     const headers = [
       ["Time", "Event", "Vul", "Shift", "Location", "Attendees"],
     ];

@@ -15,7 +15,7 @@ Start,End,Event,Location,Attendees,Vul,Plan/Exec
 1000,1000,Next Day ATO Change 2 Push,N/A,4,AM,P
 1030,1045,Next Day Initial Product Review,AMPC,1-2-4-5-6,AM,P
 1100,1130,Next Day DIM (Pre-Frag),ST,1-2-3-4-5-6-7,PM,P
-1130,1200,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM-PM,P
+1120,1150,JECG Sync Meeting,CCR,23-20-28-10-21-22,AM-PM,P
 1200,1230,Next Day MAM (Frag),ST,1-2-3-4-5-6,PM,P
 1200,1300,LFE Mass Brief,LT,8-9-4-7-6-10-11,PM,E
 1200,2000,Next Day Non-STO Vul Coord,MPC 2,13,PM,P
@@ -24,6 +24,7 @@ Start,End,Event,Location,Attendees,Vul,Plan/Exec
 1300,1345,LFE Blue Shot Pre-Pair,LT,34-35-36,AM,E
 1300,1400,Next Day GCAM (Final Product Review),AMPC,9-1-2-3-4-5-6-10,AM,P
 1300,1415,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,AM,E
+1300,1415,LFE Blue Shot Pre-Pair,MBR,34-35-36,AM,E
 1315,1345,FAA Conference Call,CTS RM-191,28-10-29-30,AM-PM,E
 1345,1400,Army Range Control Conf Call,CTS RM-191,39-37-38,AM-PM,P
 1345,1415,LFE Blue Pre-Mass,LT,8-6,AM,E
@@ -43,6 +44,7 @@ Start,End,Event,Location,Attendees,Vul,Plan/Exec
 1700,1700,2 Day Out Intel Product Drop,N/A,4-23,PM,P
 1845,2000,LFE OPFOR Pre-Pair/Pre-Mass,DDS 3,11,PM,E
 1900,1945,LFE Blue Shot Pre-Pair,LT,34-35-36,PM,E
+1900,1945,LFE Blue Shot Pre-Pair,MBR,34-35-36,PM,E
 1900,2000,Next Day GCAM (Final Product Review),ST,9-1-2-3-4-5-6-10,PM,P
 1945,2015,LFE Blue Pre-Mass,LT,8-6,PM,E
 2015,2145,LFE Mass Debrief,LT,8-9-4-6-10-11,PM,E
